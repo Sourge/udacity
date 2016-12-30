@@ -11852,7 +11852,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate number of students</span>
@@ -11917,7 +11917,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -11999,7 +11999,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12070,7 +12070,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import any additional functionality you may need here</span>
@@ -12213,7 +12213,7 @@ AdaBoost can be quite sensitive to noisy data.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12286,7 +12286,7 @@ AdaBoost can be quite sensitive to noisy data.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import the three supervised learning models from sklearn</span>
@@ -12327,41 +12327,41 @@ AdaBoost can be quite sensitive to noisy data.</p>
 DecisionTreeClassifier: 
 
 Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0000 seconds.
+Trained model in 0.0025 seconds
+Made predictions in 0.0003 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0005 seconds.
 F1 score for test set: 0.6452.
 Training a DecisionTreeClassifier using a training set size of 200. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0000 seconds.
+Trained model in 0.0029 seconds
+Made predictions in 0.0006 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0004 seconds.
 F1 score for test set: 0.7258.
 Training a DecisionTreeClassifier using a training set size of 300. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0023 seconds
+Made predictions in 0.0004 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0000 seconds.
+Made predictions in 0.0002 seconds.
 F1 score for test set: 0.6838.
 
 AdaBoostClassifier: 
 
 Training a AdaBoostClassifier using a training set size of 100. . .
-Trained model in 0.0690 seconds
-Made predictions in 0.0040 seconds.
+Trained model in 0.1725 seconds
+Made predictions in 0.0041 seconds.
 F1 score for training set: 0.9778.
-Made predictions in 0.0040 seconds.
+Made predictions in 0.0050 seconds.
 F1 score for test set: 0.6880.
 Training a AdaBoostClassifier using a training set size of 200. . .
-Trained model in 0.0710 seconds
-Made predictions in 0.0040 seconds.
+Trained model in 0.1178 seconds
+Made predictions in 0.0047 seconds.
 F1 score for training set: 0.8905.
-Made predictions in 0.0030 seconds.
+Made predictions in 0.0045 seconds.
 F1 score for test set: 0.7445.
 Training a AdaBoostClassifier using a training set size of 300. . .
-Trained model in 0.0800 seconds
-Made predictions in 0.0050 seconds.
+Trained model in 0.1505 seconds
+Made predictions in 0.0053 seconds.
 F1 score for training set: 0.8565.
 Made predictions in 0.0040 seconds.
 F1 score for test set: 0.7328.
@@ -12369,22 +12369,22 @@ F1 score for test set: 0.7328.
 KNeighborsClassifier: 
 
 Training a KNeighborsClassifier using a training set size of 100. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0033 seconds
+Made predictions in 0.0020 seconds.
 F1 score for training set: 0.8252.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0011 seconds.
 F1 score for test set: 0.7586.
 Training a KNeighborsClassifier using a training set size of 200. . .
-Trained model in 0.0000 seconds
-Made predictions in 0.0030 seconds.
+Trained model in 0.0006 seconds
+Made predictions in 0.0026 seconds.
 F1 score for training set: 0.8097.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0015 seconds.
 F1 score for test set: 0.7857.
 Training a KNeighborsClassifier using a training set size of 300. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0050 seconds.
+Trained model in 0.0008 seconds
+Made predictions in 0.0054 seconds.
 F1 score for training set: 0.8539.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0021 seconds.
 F1 score for test set: 0.8138.
 </pre>
 </div>
@@ -12562,8 +12562,8 @@ F1 score for test set: 0.8138.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Our System learns by storing a lot of information about each student of your school. By comparing this information to each other, we try to find students why resemble each other by different attributes.</p>
-<p>The idea is to find groups of students who are similiar and test, wether the majority of these groups are going to fail or pass their graduation. Thus we can identify the problem groups (where the majority fails) and the non problematic groups (where the majority passes).</p>
+<p>Our System learns by storing a lot of information about each student of your school. We try to find for every student a number of students who resemble them the most. By checking if most of the students in these groups fail or pass their tests, we can find  the problematic groups of students (where the majority does not pass their exam).</p>
+<p>By adjusting the number of neighbors we look at we can optimize our output. If the number is too low we might miss some of the problematic students. But if the number is too high, we might get more problematic students, than we really have.</p>
 
 </div>
 </div>
@@ -12594,7 +12594,7 @@ F1 score for test set: 0.8138.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12646,9 +12646,9 @@ F1 score for test set: 0.8138.
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0050 seconds.
+<pre>Made predictions in 0.0067 seconds.
 Tuned model has a training F1 score of 1.0000.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0024 seconds.
 Tuned model has a testing F1 score of 0.8000.
 </pre>
 </div>
@@ -12718,6 +12718,45 @@ Tuned model has a testing F1 score of 0.8000.
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
