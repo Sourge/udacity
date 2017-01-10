@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11837,7 +11837,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11964,7 +11964,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Select three indices of your choice you wish to sample from the dataset</span>
@@ -11990,6 +11990,9 @@ div#notebook {
     <span class="n">sample</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="n">index</span><span class="p">]],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
     <span class="n">sub</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
     <span class="n">display</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -12270,6 +12273,108 @@ div#notebook {
 
 </div>
 
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1146.0</td>
+      <td>-4672.0</td>
+      <td>-3428.0</td>
+      <td>-1652.0</td>
+      <td>-2332.0</td>
+      <td>-1028.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>64237.0</td>
+      <td>-2323.0</td>
+      <td>-849.0</td>
+      <td>13466.0</td>
+      <td>-2103.0</td>
+      <td>-607.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-11903.0</td>
+      <td>-2191.0</td>
+      <td>4449.0</td>
+      <td>-2974.0</td>
+      <td>89.0</td>
+      <td>-1463.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4642.0</td>
+      <td>-2503.0</td>
+      <td>-233.0</td>
+      <td>-106.0</td>
+      <td>-267.0</td>
+      <td>-469.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>67733.0</td>
+      <td>-154.0</td>
+      <td>2346.0</td>
+      <td>15012.0</td>
+      <td>-38.0</td>
+      <td>-48.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-8407.0</td>
+      <td>-22.0</td>
+      <td>7644.0</td>
+      <td>-1428.0</td>
+      <td>2154.0</td>
+      <td>-904.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12293,9 +12398,18 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Customer 0 seems to me like a market with mainly an average need for fresh foods</li>
-<li>Customer 1 could be a Cafeteria, needing much more Frozen and Fresh Product.</li>
-<li>Customer 2 is possibly a grocery Store, selling mainly groceries and detergens paper.</li>
+<li>Customer 0 needs more Fresh Food as the median of the data set and less than the median for all other groups<ul>
+<li>Therefore I expect this customer to be a restaurant</li>
+</ul>
+</li>
+<li>Customer 1 uses a lot more of Fresh and Frozen Food and some more of groceries<ul>
+<li>Thus I assume this customer to be some kind of cafetira</li>
+</ul>
+</li>
+<li>Customer 2 has a lot more groceries and detergents paper as the median and much less Fresh Food and Milk<ul>
+<li>This customer could be a grocery store</li>
+</ul>
+</li>
 </ul>
 
 </div>
