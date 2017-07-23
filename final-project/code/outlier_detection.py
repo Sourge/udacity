@@ -1,10 +1,12 @@
 import numpy as np # linear algebra
+import matplotlib.pyplot as plt
 
 def detect_outliers(data):
     # For each feature find the data points with extreme high or low values
     _out = []
     duplicate = []
-    check_data = data.drop(labels=["price", "date"], axis=1)
+    check_data = data.drop(labels=["id","date"], axis=1)
+    extreme_count = dict.fromkeys(data.index.values,0)
     for feature in check_data.keys():
 
         # Calculate Q1 (25th percentile of the data) for the given feature
@@ -26,14 +28,16 @@ def detect_outliers(data):
                 duplicate.append(index)
             else:
                 _out.append(index)
-
-    # Print the datapoints which are displayed in more than 1 feature
-    # print "duplicates: ",duplicate
-
-    print "extreme outliers: ", _extreme_outliers.index.values
-    outliers = _extreme_outliers.index.values
-
+        if feature != "price":
+            plot_data(x_outlier=_outliers, x_extreme=_extreme_outliers, x_normal=data, feature=feature)
+        for i in _extreme_outliers.index.values:
+            extreme_count[i] = extreme_count[i]+1
     # Remove the outliers, if any were specified
-    good_data = data.drop(data.index[outliers]).reset_index(drop=True)
-    prices = data["price"].drop(data.index[outliers]).reset_index(drop=True)
-    return good_data
+
+
+def plot_data(x_outlier, x_extreme, x_normal, feature):
+    plt.scatter(y=x_normal[feature], x=x_normal["price"], color="green")
+    plt.scatter(y=x_outlier[feature], x=x_outlier["price"], color="yellow")
+    plt.scatter(y=x_extreme[feature], x=x_extreme["price"], color="red")
+    plt.savefig("img/outliers/"+feature+".png" )
+    plt.clf()

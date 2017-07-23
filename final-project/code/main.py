@@ -8,11 +8,12 @@ df = load_data()
 ## Analyze Data
 analyze_data(data=df)
 
-## simple Linear Regression
-simpleLinearRegression(data=df)
-
 ## Outlier Detection
-good_data = detect_outliers(data=df)
+detect_outliers(data=df)
+
+to_drop = [15870]
+good_data = df.drop(df.index[to_drop]).reset_index(drop=True)
+
 
 ## Regression Split using Clusters
 cluster_regressors(data=good_data)
@@ -22,3 +23,6 @@ linearSVR(data=good_data)
 
 ## Ridge Regression
 ridgeRegression(data=good_data)
+
+## simple Linear Regression
+simpleLinearRegression(data=df)

@@ -1,5 +1,5 @@
 from data import describe_data
-from simple_regression import plot_data
+from data import plot_data
 from simple_regression import linear_regression
 from feature_relevance import check_feature_relevance
 from feature_relevance import compare_above_basement
@@ -35,7 +35,7 @@ def cluster_regressors(data):
     print "r2-score for Clustered Regressors: %.4f" % r2_optimized
 
 def linearSVR(data):
-    X = data.drop(["id", "date", "price","long","lat", "zipcode","yr_renovated"], axis=1)
+    X = data.drop(["id", "date", "price","long","lat", "zipcode","yr_renovated", "sqft_above", "sqft_basement"], axis=1)
     y = data["price"]
     X_train, X_test, y_train, y_test = tts(X, y, test_size=0.10, random_state=42)
     svr = LinearSVR(random_state=42)
@@ -55,7 +55,7 @@ def analyze_data(data):
 
 def simpleLinearRegression(data):
     ## Linear Regression
-    plot_data(data=data, x='sqft_living', y='price', filename='price_sqft.png')
+    plot_data(x=data['sqft_living'], y=data['price'], filename='price_sqft.png')
     linear_regression(data=data, x='sqft_living', y='price', filename='linear_regression.png')
 
 def ridgeRegression(data):

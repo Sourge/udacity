@@ -4,12 +4,6 @@ from sklearn import linear_model
 from sklearn.metrics import r2_score
 matplotlib.style.use('ggplot')
 
-
-def plot_data(data, x, y, filename):
-    data.plot.scatter(x=x, y=y)
-    plt.savefig("img/"+filename)
-    plt.clf()
-
 def linear_regression(data, x, y, filename):
     regression = linear_model.LinearRegression()
     regr_X = data[x].reshape(21613, -1)

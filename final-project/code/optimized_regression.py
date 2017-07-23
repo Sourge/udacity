@@ -19,7 +19,7 @@ def train_optimized_regressors(X,y):
     for i in range(5):
         loop = {}
         for j in range(4):
-            regression = Ridge(alpha=0.5, random_state=42)
+            regression = Ridge(random_state=42)
             query_str = "quality_cluster==%d and space_cluster==%d" % (i, j)
             regr_data = X
             regr_data = regr_data.assign(price=y.values)
